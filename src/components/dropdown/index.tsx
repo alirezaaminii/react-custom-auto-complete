@@ -49,7 +49,7 @@ export const DropDown = ({options, onSelect, value}: DropdownProps) => {
     handleOptionClick,
     handleOptionKeyDown,
     toggleDropdown,
-  } = useDropdown({options, onSelect, activeItemRef, dropdownRef});
+  } = useDropdown({onSelect, activeItemRef, dropdownRef});
 
   return (
     <div className={classes.dropdownContainer} ref={dropdownRef}>
