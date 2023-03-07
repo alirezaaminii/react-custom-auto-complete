@@ -6,7 +6,6 @@ export interface DropdownOption {
 }
 
 export interface UseDropDownProps {
-  options: DropdownOption[];
   onSelect: (selectedOption: DropdownOption) => void;
   activeItemRef: RefObject<HTMLDivElement>,
   dropdownRef: RefObject<HTMLDivElement>,
