@@ -1,3 +1,6 @@
+![Screenshot from 2023-03-08 01-14-50.png](..%2F..%2F..%2FPictures%2FScreenshots%2FScreenshot%20from%202023-03-08%2001-14-50.png)
+
+
 ## Folder Structure
 
 No configuration or complicated folder structures, just the files you need to build your app:
@@ -31,7 +34,6 @@ To get a local copy of the code, clone it using git:
 git clone https://github.com/alirezaaminii/react-custom-dropdown.git
 cd react-custom-dropdown
 ```
-
 Make it your own:
 
 ```
