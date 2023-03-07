@@ -1,8 +1,8 @@
 import reactLogo from './assets/react.svg'
 import './App.css'
-import {Dropdown} from "./components/dropdown";
+import {DropDown} from "./components/dropdown";
 import {useState} from "react";
-import {DropdownOption} from "./hooks/useDropdown";
+import {DropdownOption} from "./hooks/useDropDown/types";
 
 const options = [
   {
@@ -29,6 +29,18 @@ const options = [
     label: 'Health',
     value: 'health'
   },
+  {
+    label: 'Bottle',
+    value: 'bottle'
+  },
+  {
+    label: 'Laptop',
+    value: 'laptop'
+  },
+  {
+    label: 'Stand',
+    value: 'stand'
+  },
 ]
 
 function App() {
@@ -43,7 +55,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <Dropdown value={value} options={options} onSelect={setValue} />
+      <DropDown value={value} options={options} onSelect={setValue} />
     </div>
   )
 }
