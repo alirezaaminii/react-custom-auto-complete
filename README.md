@@ -1,12 +1,11 @@
-![React-Custom-Dropdown](https://github.com/alirezaaminii/react-custom-dropdown/blob/main/Screenshot%20from%202023-03-08%2001-14-50.png)
-
+![React-Custom-AutoComplete](https://github.com/alirezaaminii/react-custom-auto-complete/blob/main/Screenshot%20from%202023-11-12%2023-50-27.png)
 
 ## Folder Structure
 
 No configuration or complicated folder structures, just the files you need to build your app:
 
 ```
-react-custom-dropdown
+react-custom-auto-complete
 ├── node_modules
 ├── public
     └── vite.svg
@@ -31,9 +30,10 @@ react-custom-dropdown
 To get a local copy of the code, clone it using git:
 
 ```
-git clone https://github.com/alirezaaminii/react-custom-dropdown.git
-cd react-custom-dropdown
+git clone https://github.com/alirezaaminii/react-custom-auto-complete.git
+cd react-custom-auto-compelte
 ```
+
 Make it your own:
 
 ```
@@ -60,8 +60,8 @@ And then open http://localhost:5173 to view it in the browser.
 
 In this project, you can run the following scripts:
 
-| Script          | Description                                         |
-|-----------------| --------------------------------------------------- |
+| Script           | Description                                         |
+|------------------|-----------------------------------------------------|
 | yarn run dev     | Runs the app in the development mode.               |
 | yarn run build   | Builds the app for production to the `dist` folder. |
 | yarn run preview | Serves the production build from the `dist` folder. |

@@ -1,61 +1,53 @@
+import {useState} from "react";
 import reactLogo from './assets/react.svg'
 import './App.css'
-import {DropDown} from "./components/dropdown";
-import {useState} from "react";
-import {DropdownOption} from "./hooks/useDropDown/types";
+import {AutoComplete} from "./components/auto-complete";
+import {ISuggestion} from "./components/auto-complete/types";
 
-const options = [
+const suggestions: ISuggestion[] = [
   {
-    label: 'Science',
-    value: 'science'
+    id: 'apple',
+    label: 'Apple'
   },
   {
-    label: 'Education',
-    value: 'education'
+    id: 'gillette',
+    label: 'Gillette'
   },
   {
-    label: 'Art',
-    value: 'art'
+    id: 'mastercard',
+    label: 'Mastercard'
   },
   {
-    label: 'Sport',
-    value: 'sport'
+    id: 'the-walt-disney-company',
+    label: 'The Walt Disney Company'
   },
   {
-    label: 'Games',
-    value: 'games'
+    id: 'facebook',
+    label: 'Facebook'
   },
   {
-    label: 'Health',
-    value: 'health'
-  },
-  {
-    label: 'Bottle',
-    value: 'bottle'
-  },
-  {
-    label: 'Laptop',
-    value: 'laptop'
-  },
-  {
-    label: 'Stand',
-    value: 'stand'
-  },
+    id: 'louis-vuitton',
+    label: 'Louis Vuitton'
+  }
 ]
 
 function App() {
-  const [value, setValue] = useState<DropdownOption | null>(null);
+  const [tags, setTags] = useState<string[]>([]);
+
+  const handleSelectTag = (tag: string) => {
+    setTags(prevState => [...prevState, tag])
+  }
   return (
     <div className="App">
       <div>
         <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
+          <img src="/vite.svg" className="logo" alt="Vite logo" loading="lazy" />
         </a>
         <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} className="logo react" alt="React logo" loading="lazy" />
         </a>
       </div>
-      <DropDown value={value} options={options} onSelect={setValue} />
+      <AutoComplete tags={tags} suggestions={suggestions} onSelect={handleSelectTag} />
     </div>
   )
 }

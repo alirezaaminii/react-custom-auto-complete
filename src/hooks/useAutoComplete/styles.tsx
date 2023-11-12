@@ -5,8 +5,8 @@ interface StyleProps {
   isOpen: boolean;
 }
 
-export const useDropdownStyles = createUseStyles({
-  dropdownContainer: {
+export const useAutoCompleteStyles = createUseStyles({
+  autoCompleteContainer: {
     position: 'relative',
     width: '375px',
   },
@@ -34,11 +34,7 @@ export const useDropdownStyles = createUseStyles({
       border: `2px solid ${colors.primary + 40}`,
     },
   },
-  angleIcon: {
-    transition: 'all 200ms',
-    transform: (props: StyleProps) => props.isOpen ? 'rotateX(180deg)' : 'rotateX(0)',
-  },
-  dropdownMenu: {
+  menu: {
     boxSizing: 'border-box',
     position: 'absolute',
     top: (props: StyleProps) => props.isOpen ? '60px' : '0',
@@ -53,7 +49,7 @@ export const useDropdownStyles = createUseStyles({
     zIndex: (props: StyleProps) => props.isOpen ? 1 : -1,
     opacity: (props: StyleProps) => props.isOpen ? 1 : 0,
   },
-  dropdownMenuInsideContainer: {
+  menuInsideContainer: {
     transition: 'all 200ms',
     paddingRight: '2px',
     width: '100%',
@@ -75,7 +71,7 @@ export const useDropdownStyles = createUseStyles({
       },
     },
   },
-  dropdownMenuItem: {
+  menuItem: {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -90,9 +86,27 @@ export const useDropdownStyles = createUseStyles({
     '&:focus': {
       backgroundColor: colors.primary + 10,
       outline: 0,
-    },
-    '&.selected': {
-      backgroundColor: colors.primary + 20,
     }
   },
+  nothingToSuggest: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: '4px',
+    color: colors.secondary,
+  },
+  selectedTagsContainer: {
+    display: 'flex',
+    alignItems: 'center',
+    padding: '8px',
+    marginTop: '4px',
+    gap: '8px',
+    flexWrap: 'wrap'
+  },
+  selectedTagItem: {
+    backgroundColor: colors.secondary,
+    color: colors.white,
+    padding: '4px 8px',
+    borderRadius: '8px',
+  }
 });
